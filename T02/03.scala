@@ -12,11 +12,10 @@ object thirdQuestion{
         normalHours(nH) + otHours(oH) - tax(nH , oH)
     }
     def main(args: Array[String]): Unit = {
-        println("Number of normal hours: ")
-        var normalH = scala.io.StdIn.readInt()
-        println("Number of OT hours: ")
-        var otH = scala.io.StdIn.readInt()
-
-        println("Take home salary: " + takeHomeSalary(normalH , otH))
+        // println("Number of normal hours: ")
+        // var normalH = scala.io.StdIn.readInt()
+        // println("Number of OT hours: ")
+        // var otH = scala.io.StdIn.readInt()
+        println("Take home salary: " + takeHomeSalary(40 , 30))
     }
 }

@@ -25,8 +25,8 @@ object fourthQuestion{
     
     def main(args: Array[String]): Unit = {
         println("Best ticket price: " + maxPrice())
-        println(profit(25))
-        println(maxPrice())
+        println(profit(maxPrice()))
+        // println(maxPrice())
     }
     
 }
