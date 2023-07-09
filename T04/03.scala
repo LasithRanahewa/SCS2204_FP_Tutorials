@@ -13,6 +13,7 @@ object Main extends App {
 def toUpper(name : String) : String = {
     name.toUpperCase()
 }
+
 def toLower(name : String) : String = {
     name.toLowerCase()
 }
@@ -25,7 +26,8 @@ def toUpperSpecific(name: String) : String = {
         println("Index out of range")
         return name
     }
-    name.substring(0, i) + name.substring(i, i + 1).toUpperCase() + name.substring(i + 1)
+    // name.substring(0, i) + name.substring(i, i + 1).toUpperCase() + name.substring(i + 1)
+    name.updated(i, name(i).toUpper)
 }
 
 def formatNames(name : String, formatter: (String) => String) : String = {
