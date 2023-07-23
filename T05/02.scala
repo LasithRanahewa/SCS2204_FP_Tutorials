@@ -26,7 +26,7 @@ object main extends App
     val a = scala.io.StdIn.readInt()
     if (a > 1) {
         printf("Prime numbers less than %d : ",a)
-        primeSeq(a)
+        primeSeq(a-1)
         printf("\n")
     }
     else printf("Invalid input\n")

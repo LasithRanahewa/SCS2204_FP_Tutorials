@@ -20,7 +20,7 @@ object main extends App
     if (a > 0)
     {
         printf("First %d Fibonacci numbers : ",a)
-        fibonacciSeq(a)
+        fibonacciSeq(a-1)
         printf("\n")
     }
     else
