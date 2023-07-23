@@ -1,3 +1,4 @@
+//Scala Tutorial – 6
 
 def encrypt(s: String, i: Int): String = {
   val shift = i % 26
