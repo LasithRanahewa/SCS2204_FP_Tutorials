@@ -6,12 +6,14 @@ class Rational(n: Int, d: Int) {
 
     def neg: Rational = new Rational(-numer, denom)
 
+    def sub(that: Rational) = new Rational(numer * that.denom - that.numer * denom, denom * that.denom)
+
     override def toString: String = numer + "/" + denom
 }
 
-object Q01 extends App{
-    val a = Rational(3, 4)
+object Q2 extends App{
+    val x = new Rational(3, 4)
+    val y = new Rational(1, 2)
     
-    println(a)
-    println(a.neg)
+    println(x.sub(y))
 }
