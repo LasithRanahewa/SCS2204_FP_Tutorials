@@ -13,7 +13,6 @@ def encrypt(s: String, i: Int): String = {
       encrypted += char
     }
   }
-
   encrypted
 }
 
@@ -41,7 +40,7 @@ def cipher(s: String, shift: Int, func: (String, Int) => String): String = {
 def main(args: Array[String]): Unit = {
   print("Enter the string to encrypt: ")
   val str = scala.io.StdIn.readLine()
-  // println("Enter the string to decrypt: ")
+  // print("Enter the string to decrypt: ")
   // val str = scala.io.StdIn.readLine()
   print("Enter the shift: ")
   val shift = scala.io.StdIn.readInt()
@@ -55,5 +54,8 @@ def main(args: Array[String]): Unit = {
 
   val decrypted_str = cipher(encrypted_str, shift, decrypt)
   println(s"Decrypted: $decrypted_str")
+
+  // val decrypted_str = cipher(str, shift, decrypt)
+  // println(s"Encrypted: $decrypted_str")
 }
 
