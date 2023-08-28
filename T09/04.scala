@@ -4,13 +4,17 @@ class Account(n:Int, b:Double) {
 
     def withdraw(a:Double) = this.balance = this.balance - a
     def deposit(a:Double) = this.balance = this.balance + a
+    // def transfer(a:Account, b:Double) = {
+    //     if (this.balance < b) println("Insufficient balance")
+    //     else 
+    //         {
+    //             this.withdraw(b)
+    //             a.deposit(b)
+    //         }
+    // }
     def transfer(a:Account, b:Double) = {
-        if (this.balance < b) println("Insufficient balance")
-        else 
-            {
-                this.withdraw(b)
-                a.deposit(b)
-            }
+            this.withdraw(b)
+            a.deposit(b)
     }
 
     override def toString = "["+acnumber+" : "+balance+"]"
@@ -40,7 +44,7 @@ object Q4 extends App{
     println("\nList of Accounts with negative balances")
     println(overdraft(bank))
 
-    println("\nTotal Balance "+balance(bank))
+    println("\nSum of all account balance "+balance(bank))
     
     println("\nFinal balances of all accounts after applying the interest")
     interest(bank)
